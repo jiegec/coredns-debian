@@ -12,6 +12,7 @@ jobs:
       - name: Build images
         run: |
           ./build.sh bookworm 1.10.1
-      - uses: actions/upload-artifact@v4
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
         with:
-          path: *.deb
+          path: "*.deb"
